@@ -1,5 +1,5 @@
 import { CiShoppingCart } from "react-icons/ci";
-import PrimaryButton from "../Common/PrimaryButton";
+import PrimaryButton from "../Button/Button";
 const Header = () => {
   const links = (
     <>
