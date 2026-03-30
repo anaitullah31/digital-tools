@@ -1,20 +1,28 @@
 const Stat = () => {
   return (
-    <div className="bg-[#4F39F6] text-white py-10">
-      <div className="max-w-7xl mx-auto flex justify-around">
-        <div className="">
-          <div className="stat-value">50K+</div>
-          <div className="stat-desc text-white">Active Users</div>
+    <div className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-10 sm:py-12">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 text-center text-white">
+          <div className="px-6 py-4 sm:border-r sm:border-white/30">
+            <h2 className="text-4xl sm:text-5xl font-bold">50K+</h2>
+            <p className="mt-2 text-sm sm:text-base text-white/80">
+              Active Users
+            </p>
+          </div>
+
+          <div className="px-6 py-4 sm:border-r sm:border-white/30">
+            <h2 className="text-4xl sm:text-5xl font-bold">200+</h2>
+            <p className="mt-2 text-sm sm:text-base text-white/80">
+              Premium Tools
+            </p>
+          </div>
+
+          <div className="px-6 py-4">
+            <h2 className="text-4xl sm:text-5xl font-bold">4.9</h2>
+            <p className="mt-2 text-sm sm:text-base text-white/80">Rating</p>
+          </div>
         </div>
-        <div className="">
-          <div className="stat-value">200+</div>
-          <div className="stat-desc text-white">Premium Tools</div>
-        </div>
-        <div className="">
-          <div className="stat-value">4.9</div>
-          <div className="stat-desc text-white">Rating</div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };

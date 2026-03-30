@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Pricing from "./components/Pricing/Pricing";
 import Stat from "./components/Stat/Stat";
+import Workflow from "./components/Workflow/Workflow";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Stat />
       <GetStarted />
       <Pricing />
+      <Workflow />
       <div className="bg-[#101727] text-white">
         <Footer />
       </div>
