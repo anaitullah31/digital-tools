@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import PricingData from "./PricingData";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 const loadingPringData = async () => {
   const res = await fetch("subscription.json");
@@ -16,9 +17,7 @@ const Pricing = () => {
         description="Choose the plan that fits your needs. Upgrade or downgrade anytime."
       />
       <div>
-        <Suspense
-          fallback={<span className="loading loading-ring loading-xl"></span>}
-        >
+        <Suspense fallback={<LoadingSpinner />}>
           <PricingData allPricingData={allPricingData} />
         </Suspense>
       </div>

@@ -2,7 +2,6 @@ import Button from "../Button/Button";
 
 const PricingCard = ({ subscription }) => {
   const { name, description, price, features, buttonText, tag } = subscription;
-  console.log(tag);
 
   return (
     <div
