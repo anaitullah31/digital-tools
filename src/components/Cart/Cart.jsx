@@ -1,6 +1,6 @@
 import EmptyCart from "../EmptyCart/EmptyCart";
 
-const Cart = ({ carts }) => {
+const Cart = ({ carts, handleRemoveCartItem, handleCheckout }) => {
   const total = carts.reduce(
     (accumulator, currentValue) => accumulator + currentValue.price,
     0,
@@ -33,7 +33,10 @@ const Cart = ({ carts }) => {
                     </div>
                   </div>
 
-                  <button className="text-sm font-medium text-pink-500 hover:text-pink-600 cursor-pointer">
+                  <button
+                    onClick={() => handleRemoveCartItem(item)}
+                    className="text-sm font-medium text-pink-500 hover:text-pink-600 cursor-pointer"
+                  >
                     Remove
                   </button>
                 </div>
@@ -45,7 +48,7 @@ const Cart = ({ carts }) => {
               <h2 className="text-2xl font-bold text-gray-900">${total}</h2>
             </div>
 
-            <button className="mt-5 w-full rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-3 text-sm font-semibold text-white cursor-pointer">
+            <button onClick={handleCheckout} className="mt-5 w-full rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-3 text-sm font-semibold text-white cursor-pointer">
               Proceed To Checkout
             </button>
           </div>

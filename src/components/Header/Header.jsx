@@ -1,6 +1,6 @@
 import { CiShoppingCart } from "react-icons/ci";
 import PrimaryButton from "../Button/Button";
-const Header = () => {
+const Header = ({ carts }) => {
   const links = (
     <>
       <li>
@@ -56,8 +56,13 @@ const Header = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end flex gap-4">
-        <button>
+        <button className="relative">
           <CiShoppingCart />
+          {carts.length > 0 && (
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-semibold w-4 h-4 flex items-center justify-center rounded-full">
+              {carts.length}
+            </span>
+          )}
         </button>
         <a href="#">Login</a>
         <a>

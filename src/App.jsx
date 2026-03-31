@@ -31,14 +31,27 @@ function App() {
     setActiveTab(tab);
   };
 
-  const handleAddToCart = useCallback((product) => {
-    
-    setCarts((prevCarts) => [...prevCarts, product]);
-  }, []);
+  const handleAddToCart = (product) => {
+    const exists = carts.some((item) => item.id === product.id);
+    if (exists) {
+      alert("Already added!");
+      return;
+    }
+    setCarts([...carts, product]);
+  };
+
+  const handleRemoveCartItem = (product) => {
+    const updatedCart = carts.filter((cart) => cart.id !== product.id);
+    setCarts(updatedCart);
+  };
+
+  const handleCheckout = () => {
+    setCarts([]);
+  };
 
   return (
     <>
-      <Header />
+      <Header carts={carts} />
       <Hero />
       <Stat />
 
@@ -83,7 +96,13 @@ function App() {
             {activeTab === "product" && (
               <Products products={products} handleAddToCart={handleAddToCart} />
             )}
-            {activeTab === "cart" && <Cart carts={carts} />}
+            {activeTab === "cart" && (
+              <Cart
+                carts={carts}
+                handleRemoveCartItem={handleRemoveCartItem}
+                handleCheckout={handleCheckout}
+              />
+            )}
           </>
         )}
       </div>
