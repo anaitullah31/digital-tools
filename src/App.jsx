@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import GetStarted from "./components/GetStarted/GetStarted";
@@ -11,12 +11,17 @@ import Workflow from "./components/Workflow/Workflow";
 import SectionHeading from "./components/SectionHeading/SectionHeading";
 import Cart from "./components/Cart/Cart";
 import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
+import { ToastContainer, toast } from "react-toastify";
 
 function App() {
   const [activeTab, setActiveTab] = useState("product");
   const [carts, setCarts] = useState([]);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const notifySuccess = (message) => toast.success(message);
+  const notifyWarn = (message) => toast.warn(message);
+  const notifyError = (message) => toast.error(message);
 
   useEffect(() => {
     fetch("products.json")
@@ -34,23 +39,27 @@ function App() {
   const handleAddToCart = (product) => {
     const exists = carts.some((item) => item.id === product.id);
     if (exists) {
-      alert("Already added!");
+      notifyWarn("This Product Already In Your Cart!");
       return;
     }
+    notifySuccess(`${product.name} Added Successfully`);
     setCarts([...carts, product]);
   };
 
   const handleRemoveCartItem = (product) => {
     const updatedCart = carts.filter((cart) => cart.id !== product.id);
+    notifyError(`${product.name} has been deleted`)
     setCarts(updatedCart);
   };
 
   const handleCheckout = () => {
+    notifySuccess("Checkout Successfully Completed")
     setCarts([]);
   };
 
   return (
     <>
+      <ToastContainer position="top-center" />
       <Header carts={carts} />
       <Hero />
       <Stat />
@@ -65,7 +74,7 @@ function App() {
           <div className="flex items-center rounded-full border border-gray-200 bg-white p-1 shadow-sm">
             <button
               onClick={() => handleTab("product")}
-              className={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 ${
+              className={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 cursor-pointer ${
                 activeTab === "product"
                   ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white shadow"
                   : "text-gray-700"
@@ -76,7 +85,7 @@ function App() {
 
             <button
               onClick={() => handleTab("cart")}
-              className={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 ${
+              className={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 cursor-pointer ${
                 activeTab === "cart"
                   ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white shadow"
                   : "text-gray-700"

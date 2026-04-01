@@ -12,7 +12,7 @@
       "50+ writing templates",
       "Grammar checker"
     ],
-    "icon": "/assets/icons/ai-writing.png"
+    "icon": "https://i.ibb.co/DDbw5gmT/design-tool.png"
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
     "tag": "Popular",
     "tagType": "popular",
     "features": ["2000+ templates", "Monthly updates", "Commercial license"],
-    "icon": "/assets/icons/design.png"
+    "icon": "https://i.ibb.co/v6nTbPyr/operation.png"
   },
   {
     "id": 3,
@@ -34,7 +34,7 @@
     "tag": "New",
     "tagType": "new",
     "features": ["10M+ assets", "Commercial use", "No attribution"],
-    "icon": "/assets/icons/stock.png"
+    "icon": "https://i.ibb.co/B2q25khw/portfolio.png"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "tag": "Popular",
     "tagType": "popular",
     "features": ["50+ automations", "API access", "Custom workflows"],
-    "icon": "/assets/icons/automation.png"
+    "icon": "https://i.ibb.co/DD0nf2Zd/social-media.png"
   },
   {
     "id": 5,
@@ -56,7 +56,7 @@
     "tag": "New",
     "tagType": "new",
     "features": ["100+ templates", "ATS optimization", "Export to PDF"],
-    "icon": "/assets/icons/resume.png"
+    "icon": "https://i.ibb.co/8LF9nL8S/writing-2327400-1.png"
   },
   {
     "id": 6,
@@ -67,7 +67,7 @@
     "tag": "Best Seller",
     "tagType": "best seller",
     "features": ["5000+ assets", "Scheduler included", "Analytics dashboard"],
-    "icon": "/assets/icons/social.png"
+    "icon": "https://i.ibb.co/TqYWKzbT/media.png"
   },
   {
     "id": 7,
@@ -82,7 +82,7 @@
       "Automation flows",
       "Real-time analytics"
     ],
-    "icon": "/assets/icons/email.png"
+    "icon": "https://i.ibb.co/hppHdmK/email-marketing.png"
   },
   {
     "id": 8,
@@ -93,7 +93,7 @@
     "tag": "New",
     "tagType": "new",
     "features": ["100+ website templates", "SEO tools", "Custom domains"],
-    "icon": "/assets/icons/website.png"
+    "icon": "https://i.ibb.co/7t6H2ypD/website-builder.png"
   },
   {
     "id": 9,
@@ -104,7 +104,7 @@
     "tag": "Best Seller",
     "tagType": "best seller",
     "features": ["4K export", "100+ effects", "Audio tools"],
-    "icon": "/assets/icons/video.png"
+    "icon": "https://i.ibb.co/tT2c2gSN/video-editing.png"
   },
   {
     "id": 10,
@@ -115,6 +115,6 @@
     "tag": "Popular",
     "tagType": "popular",
     "features": ["Custom reports", "Real-time data", "Integration support"],
-    "icon": "/assets/icons/analytics.png"
+    "icon": "https://i.ibb.co/mFBPj5XQ/dashboard-layout.png"
   }
 ]

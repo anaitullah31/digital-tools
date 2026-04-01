@@ -2,7 +2,7 @@ import CartImage from "../../assets/products/shopping-cart.png";
 
 const EmptyCart = () => {
   return (
-    <div className="max-w-5xl mx-auto mt-10 px-4">
+    <div className="max-w-7xl mx-auto mt-10 px-4">
       <h2 className="text-xl font-semibold text-gray-800 mb-6">Your Cart</h2>
 
       <div className="flex flex-col items-center justify-center border border-gray-200 rounded-xl py-20 text-center bg-white">
