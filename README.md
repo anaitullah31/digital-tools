@@ -12,7 +12,7 @@ This project allows users to browse premium digital products, view details, and 
 
 ## 🌐 Links
 - 🔗 **GitHub Repository:** https://github.com/anaitullah31/digital-tools
-- 🚀 **Live Site:** https://your-live-site-link.com
+- 🚀 **Live Site:** http://anait-digital-tools.surge.sh/
 
 ---
 
