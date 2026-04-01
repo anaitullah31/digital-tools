@@ -1,7 +1,7 @@
 import React from "react";
 
 const ProductCard = ({ product, handleAddToCart }) => {
-  const { name, description, price, tagType, features, icon } = product;
+  const { name, description, price, tagType, features, icon, period } = product;
 
   return (
     <div className="w-full rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
@@ -22,7 +22,7 @@ const ProductCard = ({ product, handleAddToCart }) => {
 
       <div className="mt-5">
         <span className="text-3xl font-bold text-gray-900">${price}</span>
-        <span className="text-base text-gray-500">/Mo</span>
+        <span className="text-base text-gray-500">/{period}</span>
       </div>
 
       <ul className="mt-5 space-y-3 text-sm text-gray-600">
